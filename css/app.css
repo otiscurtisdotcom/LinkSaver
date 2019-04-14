@@ -1,0 +1,340 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700');
+
+@font-face {
+    font-family: 'Soulcraft';
+    src: url('../fonts/Soulcraft.ttf') format('truetype');
+}
+
+/* Media Queries */
+
+/* Set variables for desktop */
+:root {
+	/* Text sizes */
+	--lg-txt: 70px;
+	--md-txt: 38px;
+	--sm-txt: 20px;
+
+	/* Sizes */
+	--padding: 16px;
+	--top-height: calc(var(--lg-txt) + (2 * var(--padding)));
+
+	/* Fonts */
+	--logo-font: 'Soulcraft';
+	--headline-font: 'PT Sans Narrow', sans-serif;
+	--headline-weight: 700;
+	--body-font: 'PT Sans Narrow', sans-serif;
+	--body-weight: 400;
+
+	/* Colours */
+	--primary: #1a1a1a;
+	--secondary: #8eb;
+	--bg: #efefef;
+	--tint: #fff;
+}
+
+/* General */
+body {
+	margin: 0;
+	background-color: #efefef;
+	background-color: var(--bg);
+	color: #1a1a1a;
+	color: var(--primary);
+	min-height: 100vh;
+	overflow-y: scroll;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: var(--body-font);
+	font-weight: 400;
+	font-weight: var(--body-weight);
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+/* Typography */
+h1 {
+	font-size: 70px;
+	font-size: var(--lg-txt);
+	line-height: 70px;
+	line-height: var(--lg-txt);
+	font-family: 'Soulcraft';
+	font-family: var(--logo-font);
+	margin: 0;
+	font-variation-settings: 'wdth' 100;
+}
+
+h1 span {
+	font-variation-settings: 'wdth' 0;
+}	
+
+h2 {
+	font-size: 38px;
+	font-size: var(--md-txt);
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: var(--headline-font);
+	font-weight: 700;
+	font-weight: var(--headline-weight);
+	margin: 0 0 20px;
+}
+
+p {
+	font-size: 20px;
+	font-size: var(--sm-txt);
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: var(--body-font);
+	font-weight: 400;
+	font-weight: var(--body-weight);
+	font-weight: 400;
+	margin: 0 0 20px;
+}
+
+.cta, #pagination a.currentLink {
+    -webkit-appearance: none;
+    display: inline-block;
+    padding: calc(16px / 2);
+    padding: calc(var(--padding) / 2);
+    color: #efefef;
+    color: var(--bg);
+    background-color: #1a1a1a;
+    background-color: var(--primary);
+    border: none;
+    text-decoration: none;
+    font-size:20px;
+    font-size:var(--sm-txt);
+    line-height:20px;
+    line-height:var(--sm-txt);
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: var(--headline-font);
+    font-weight: 700;
+    font-weight: var(--headline-weight);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.cta:hover, #messages .cta:hover {
+    background-color: #8eb;
+    background-color: var(--secondary);
+    color: #1a1a1a;
+    color: var(--primary);
+}
+
+
+/* Layout */
+header, main {
+	width: 100%;
+	float: left;
+}
+
+header {
+	position: fixed;
+	height: calc(70px + (2 * 16px));
+	height: var(--top-height);
+	top: 0;
+	background-color: #8eb;
+	background-color: var(--secondary);
+	z-index: 1;
+}
+
+header > .inner > div {
+	width: 50%;
+	float: left;
+}
+
+main {
+	padding: calc(70px + (2 * 16px)) 0;
+	padding: var(--top-height) 0
+}
+
+.inner {
+	padding: 16px;
+	padding: var(--padding);
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+
+/* Form & Intro */
+#formArea {
+	background-color: #8eb;
+	background-color: var(--secondary);
+	height: calc(70px + (2 * 16px));
+	height: var(--top-height);
+}
+
+input {
+	font-size: 20px;
+	font-size: var(--sm-txt);
+	line-height: 20px;
+	line-height: var(--sm-txt);
+	height: calc(20px + 16px);
+	height: calc(var(--sm-txt) + var(--padding));
+	font-weight: 400;
+	outline: none;
+	display: block;
+}
+
+input[type="text"] {
+	padding: calc(16px / 2);
+	padding: calc(var(--padding) / 2);
+	-webkit-appearance: none;
+	border: none;
+	width: calc(100% - 100px);
+    float: left;
+}
+
+input[type="submit"] {
+	width: 100px;
+	float: right;
+}
+
+input[type="submit"]:hover {
+	background-color: #efefef;
+	background-color: var(--bg);
+	color: #1a1a1a;
+	color: var(--primary);
+}
+
+form {
+    float: left;
+    width: 100%;
+    padding-top: calc(70px - 38px - 16px);
+    padding-top: calc(var(--lg-txt) - var(--md-txt) - var(--padding));
+}
+
+
+/* Messages */
+#messages {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	background-color: transparent;
+	pointer-events: none;
+	z-index: 2;
+}
+
+#messages.shown {
+	background-color: rgba(0,0,0,0.5);
+	pointer-events: auto;
+}
+
+#messages > div {
+	position: absolute;
+	width: 100%;
+	max-width: 400px;
+	padding: 16px;
+	padding: var(--padding);
+	right: -400px;
+	height: 100%;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	background-color: #1a1a1a;
+	background-color: var(--primary)
+}
+
+#messages > div.active {
+	right: 0;
+}
+
+#messages h2, #messages p {
+	color: #efefef;
+	color: var(--bg)
+}
+
+#messages .cta {
+	color: #1a1a1a;
+	color: var(--primary);
+    background-color: #efefef;
+    background-color: var(--bg);
+}
+
+
+/* ---- List of links --- */
+#masterList {
+	padding: 0;
+	margin: 0;
+}
+
+#masterList li {
+	list-style: none;
+	position: relative;
+	padding: 16px;
+	padding: var(--padding);
+	background-color: #fff;
+	background-color: var(--tint);
+	font-size: 38px;
+	font-size: var(--md-txt);
+	line-height: 38px;
+	line-height: var(--md-txt);
+	margin-bottom: 16px;
+	margin-bottom: var(--padding)
+}
+
+#masterList li a {
+	cursor: pointer;
+	position: absolute;
+	right: 16px;
+	right: var(--padding);
+}
+
+
+/* ---- Pagination --- */
+#pagination {
+    width: 100%;
+    text-align: center;
+}
+
+#pagination a {
+	font-size: 20px;
+	font-size: var(--sm-txt);
+	color: #1a1a1a;
+	color: var(--primary);
+	pointer-events: none;
+	visibility: hidden;
+	padding: 10px;
+	text-decoration: none;
+}
+
+#pagination a:hover {
+	text-decoration: underline;
+}
+
+#pagination a.shown {
+	display: inline-block;
+	visibility: visible;
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+#pagination a.currentLink {
+	cursor: default;
+	text-decoration: none !important;
+}
+
+
+/* Set variables and layout for mobile & small screens */
+@media (max-width: 800px) {
+	:root {
+		/* Text sizes */
+		--lg-txt: 50px;
+		--md-txt: 24px;
+		--sm-txt: 18px;
+
+		/* Sizes */
+		--padding: 10px;
+		--top-height: calc((2 * var(--lg-txt)) + (4 * var(--padding)));
+	}
+
+	header > .inner > div {
+		width: 100%;
+	}
+}

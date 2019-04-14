@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Linksaver</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+
+<header>
+	<div class="inner">
+		<div>
+			<h1>Link<span>Saver</span></h1>
+		</div>
+		<div>
+			<form id="newLink">
+				<input type="text" placeholder="Enter a URL" name="newLink">
+				<input type="submit" name="submit" class="cta">
+			</form>
+		</div>
+	</div>
+</header>
+	
+
+
+
+<main>
+	<div class="inner">
+		<h2>You have <span id="totalLinksSaved"></span> saved</h2>
+	</div>
+
+	<div class="inner">
+		<ol id="masterList"></ol>
+	</div>
+
+	<div class="inner">
+		<div id="pagination">
+			<a href="#" data-pg="prev"><</a>
+			<span></span>
+			<a href="#" data-pg="next">></a>
+		</div>
+	</div>
+</main>
+
+<section id="messages">
+	<div id="errorMessage">
+		<h2>Error!</h2>
+		<p><span></span></p>
+		<a class="cta" href="#">Got it</a>
+	</div>
+
+	<div id="thanksMessage">
+		<h2>Thanks!</h2>
+		<p><span></span><br>
+			has been added to your list
+		</p>
+		<a class="cta" href="#">Got it</a>
+	</div>
+
+	<div id="removeMessage">
+		<h2>Removed!</h2>
+		<p><span></span><br>
+			has been removed from your list
+		</p>
+		<a class="cta" href="#">Got it</a>
+	</div>
+</section>
+	
+
+<script src="js/app.min.js"></script>
+</body>
+</html>
