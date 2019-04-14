@@ -1,0 +1,27 @@
+Linksaver - Technical Design
+Version 1.0
+
+Introduction:
+The purpose of this app is to allow a user to save links as bookmarks.
+
+Requirements:
+- The user can add or remove links
+- Pagination for each 20 links
+- The list of links must persist refresh
+- Thank you message after adding a link
+
+Technology:
+- Linksaver uses Gulp for running tasks
+- PostCSS is used for allowing modern CSS on older browsers
+- Google Closure Compiler minifies CSS
+
+Design:
+- The top bar contains the LinkSaver logo & form
+- On submitting the form, the link is checked by fetching the URL
+- If the URL returns a 404, an error message is displayed
+- If the URL is already on the list, a different error message is displayed
+- If OK, the link is added to an array, these are then displayed
+- The number of pages is calculated, and pagination is added under the links
+- The array is also pushed to a cookie, which is retrieved when the page is reloaded
+
+
