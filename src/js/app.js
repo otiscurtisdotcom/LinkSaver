@@ -168,12 +168,17 @@ const loadFromCookie = ()=> {
 	cookieArray.forEach(cookie => {
 		//Check if any links saved as cookie
 		if(cookie.indexOf('listOfLinks') > -1) {
+			console.log('THING: ' + cookie)
 			//Unpack cookie string and push links
 			loadedLinks = JSON.parse(cookie)
 		}
 	})
 	if (loadedLinks) {
+		//If there are links push to array
 		pushLinks(loadedLinks)
+	} else {
+		//Else display message
+		totalLinksSaved.innerHTML = 'no links'
 	}
 }
 loadFromCookie()
