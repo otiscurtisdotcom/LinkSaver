@@ -1,0 +1,29 @@
+{
+  "name": "linksaver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otiscurtisdotcom/linksaver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otiscurtisdotcom/linksaver/issues"
+  },
+  "homepage": "https://github.com/otiscurtisdotcom/linksaver#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.3",
+    "google-closure-compiler": "^20190325.0.0",
+    "gulp": "^4.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss-preset-env": "^6.6.0"
+  }
+}
