@@ -19,6 +19,7 @@
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "browser-sync": "^2.26.3",
+    "gh-pages": "^2.0.1",
     "google-closure-compiler": "^20190325.0.0",
     "gulp": "^4.0.0",
     "gulp-gh-pages": "^0.5.4",

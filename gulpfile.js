@@ -12,7 +12,7 @@ const closureCompiler = require('google-closure-compiler').gulp()
 const browserSync = require('browser-sync').create()
 
 //Github pages
-var deploy = require('gulp-gh-pages');
+const ghpages = require('gh-pages');
 
 
 //Tasks...
@@ -78,9 +78,8 @@ gulp.task('watch', ()=> {
 })
 
 //Deploy to Github pages
-gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-});
+gulp.task('deploy', ()=> {
+	return ghpages.publish('dist')
+})
 
-gulp.task('default', gulp.series('html','js','css','fonts','watch','deploy'))
+gulp.task('default', gulp.series('html','js','css','fonts','watch'))
