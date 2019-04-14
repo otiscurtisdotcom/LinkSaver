@@ -178,7 +178,7 @@ const loadFromCookie = ()=> {
 		pushLinks(loadedLinks)
 	} else {
 		//Else display message
-		totalLinksSaved.innerHTML = 'no links'
+		totalLinksSaved.innerHTML = '0 links'
 	}
 }
 loadFromCookie()
@@ -196,7 +196,9 @@ const newLink = document.getElementById('newLink')
 newLink.addEventListener('submit', e=> {
 	e.preventDefault()
 
-	const urlToSubmit = newUrlField.value
+	//Get URL from text field & make secure
+	const urlToSubmit = newUrlField.value.replace('http://', 'https://')
+
 	checkUrl(urlToSubmit).then(function(result) {
 		if (!result) {
 			linkFail(urlToSubmit,urlToSubmit + ' does not exist')
