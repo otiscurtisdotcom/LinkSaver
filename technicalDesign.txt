@@ -25,3 +25,6 @@ Design:
 - The array is also pushed to a cookie, which is retrieved when the page is reloaded
 
 
+Limitations:
+- Unable to display the titles of the links rather than the URL due to CORS issues
+- Information saved to cookie is very limited for shared computers or users with more than one device
