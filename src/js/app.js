@@ -3,7 +3,6 @@ let linksObj = {
 	listOfLinks: []
 }
 
-//Intro
 const totalLinksSaved = document.getElementById('totalLinksSaved')
 const masterList = document.getElementById('masterList')
 
